@@ -1,5 +1,3 @@
-$('form').submit(function(e){
-    e.preventDefault(); // prevents page reloading
-   // api request
-   return false;
-});
+var form = document.getElementById("vocab_form");
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);

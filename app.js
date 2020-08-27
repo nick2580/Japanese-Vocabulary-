@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const bodyparser = require('body-parser')
+const mongoose = require('mongoose');
 const fs = require('fs')
 const ejs = require('ejs');
 let setOfWords = require('./data.json')
@@ -26,6 +27,9 @@ let shuffle = function(element){
     }
     return element;
 }
+
+//Bring all api from auth
+const auth = require('./routes/api/auth')
 
 //Shuffle array of object
 let vocabulary = shuffle(setOfWords);

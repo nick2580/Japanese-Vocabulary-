@@ -81,7 +81,7 @@
                     <h2 class="mb-4">
                         <strong><%= typeof eng_vocab_prompt == 'undefined'? 'Good Afternoon' : eng_vocab_prompt %></strong>
                     </h2>
-                    <form action="/practice" method="POST" class="needs-validation container">
+                    <form id="vocab_form" action="/practice" method="POST" class="needs-validation container" >
 
                         <input class="form-control w-responsive text-center mx-auto p-3 mt-2" name="user_jpn_vocab" type="text" autocomplete="off" placeholder="Example: こんにちは">
 
@@ -122,9 +122,9 @@
     
                         <button type="submit" class="btn btn-warning btn-rounded">Submit</button>
                     </form><br><br>
-                    <p class="mb-4">
+                    <h3 class="mb-4">
                         <strong><%= typeof vocab_result_message == 'undefined'? '' : vocab_result_message %></strong>
-                    </p>
+                    </h3>
                 </div>
                 <!-- Content -->
             </section>
@@ -133,6 +133,6 @@
     </main>
     <!-- Kanji Section End -->
     <hr class="my-5">
-
+    <script type="text/javascript" src="/public/script.js"></script>
 </body>
 </html>
